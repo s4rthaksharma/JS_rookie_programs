@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- OBJECTS in JS -->
+    <!-- JSON(Javascript object Notation) -->
+
+    <script>
+        obj1={
+            rno:100,
+            name:"bharat",
+            admno:1000,
+            fun:function(){
+                console.log(this.admno)
+                return this.name
+            }
+        }
+
+        console.log(obj1)
+        console.log(obj1.name)
+        console.log(obj1.fun)
+        console.log(obj1.fun())
+
+
+        obj2={
+            a:100,
+            b:200,
+            c:300
+        }
+
+// console.log(obj2.length)
+
+//.....Traversing
+
+
+for(parul in obj2)
+{
+    console.log(parul)
+}
+
+
+len=0
+for(parul in obj2)
+{
+    len++
+}
+
+console.log("object length method 1=",len)
+        
+
+len1=Object.keys(obj2).length
+console.log("length using second method=",len1)
+
+obj3=new Object()
+obj3.aa=100
+obj3.bb=200
+console.log(obj3)
+document.write(obj3.aa+" "+obj3.bb)
+
+
+
+obj4={
+    fun:function(){
+        return this.aa+" "+this.bb
+    }
+}
+
+console.log(obj4.fun.call(obj3))
+
+ar=[10,20,30]
+        console.log(ar.length)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

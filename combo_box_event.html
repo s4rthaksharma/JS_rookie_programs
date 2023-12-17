@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+<select name="" id="o1" onchange="fun1()">
+    <option value="">select option</option>
+    <option value="">enable</option>
+    <option value="">disable</option>
+</select>
+<br><br>
+<input type="radio" name=r11 Id="i1" >English
+<input type="radio" Id="i2" name=r11>English
+<script>
+function fun1()
+{
+    x=document.getElementById('o1')
+    y=document.getElementById('i1')
+    z=document.getElementById('i2')
+console.log(x.selectedIndex)
+
+/*
+result=x.options[x.selectedIndex].text
+
+if(result=="enable")
+{
+    y.disabled=false
+    z.disabled=false
+
+}
+else
+{
+    y.disabled=true
+    z.disabled=true
+ 
+}
+*/
+
+result=x.selectedIndex
+if(result==1)
+{
+    y.disabled=false
+    z.disabled=false
+
+}
+else if(result==2)
+{
+    y.disabled=true
+    z.disabled=true
+
+}
+
+}
+</script>
+
+    
+</body>
+</html>

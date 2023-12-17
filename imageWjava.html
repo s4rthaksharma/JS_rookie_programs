@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+<img id="img1" src="1.png" onmouseenter="fun1()" onmouseout="fun2()">
+</center>
+<br><br>
+<center>
+<button onclick="fun()">
+    click
+</button>
+</center>
+<script>
+function fun()
+{
+    x=document.getElementById('img1')
+    x.src='2.png'
+    x.style.border='2px solid black'
+    x.style.borderRadius='100%'
+    x.style.opacity='1'
+
+}
+function fun1()
+{
+    x=document.getElementById('img1')
+    y=document.getElementById('s1')
+    y.innerText='<b>image loaded</b>'
+    // y.style.color='red'
+    // y.style.fontSize='50px'
+    // y.style.textDecoration='underline'
+    
+    x.src='2.png'
+    x.style.border="10px solid black"
+
+}
+function fun2()
+{
+    x=document.getElementById('img1')
+    y=document.getElementById('s1')
+    y.innerText=''
+    x.src='1.png'
+    x.style.border="none"
+
+}
+</script>
+<span id="s1">
+
+</span>
+</body>
+</html>

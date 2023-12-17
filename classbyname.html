@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 class="one">This is heading 1</h1>
+<h1 class="one">This is heading 2</h1>
+<h1 class="one">This is heading 3</h1>
+
+<script>
+    x=document.getElementsByClassName('one')
+    console.log(x)
+
+    y=Array.from(x)
+    console.log(y)
+
+    for(i=0;i<y.length;i++)
+    {
+        // console.log(y[i])
+        // y[i].style.color='red'
+
+
+    }
+
+    for(i=0;i<y.length;i++)
+    {
+        y[i].addEventListener("click", 
+        function()
+            {
+                alert("clicked")
+            }
+        )    
+    }
+
+    
+    for(i=0;i<y.length;i++)
+    {
+        a=Math.floor(Math.random()*256)
+        b=Math.floor(Math.random()*256)
+        c=Math.floor(Math.random()*256)
+        y[i].style.color=`rgb(${a},${b},${c})`
+    }
+    
+
+
+</script>
+</body>
+</html>
